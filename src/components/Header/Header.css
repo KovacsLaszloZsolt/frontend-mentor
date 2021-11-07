@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    background-color: hsl(0, 0%, 100%);
+    height: 80px;
+}
+
+.page-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.mode-ctn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+}
+
+.mode-icon {
+    font-size: 18px;
+}
+
+.color-mode {
+    margin-left: .2rem;
+}
