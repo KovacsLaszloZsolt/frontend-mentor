@@ -1,0 +1,64 @@
+.select-ctn {
+    position: relative;
+    width: fit-content;
+}
+
+.filter-elems-ctn{
+    position: absolute;
+    top: 0;
+}
+
+.arrow-icon {
+    position: absolute;
+    top: 13px;
+    right: 42px;
+}
+
+.filter-elem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    min-width: 12.5rem;
+    width: 53vw;
+    margin: 0 5vw;
+    padding: 0 1.5rem;
+    list-style: none;
+}
+
+.filter-elem-selected::after {
+    content: "";
+    z-index: 555555;
+    width: 18px;
+    height: 22px;
+    background-image: url(../../assets/expand_more_black_24dp.svg);
+    margin-left: auto;
+}
+
+.filter-elem-selected-open::after {
+    content: "";
+    z-index: 555555;
+    width: 18px;
+    height: 22px;
+    background-image: url(../../assets/expand_more_black_24dp.svg);
+}
+
+.filter-elem:first-of-type {
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.filter-elem:nth-of-type(2) {
+    border-radius: 5px 5px 0 0;
+}
+
+.filter-elem:last-of-type {
+    border-radius: 0 0 5px 5px;
+}
+
+.inactive {
+    display: none;
+}
