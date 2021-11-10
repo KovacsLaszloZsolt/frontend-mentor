@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
     color: hsl(200, 15%, 8%);
+    text-decoration: none;
 }
 
 html {

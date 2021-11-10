@@ -3,7 +3,9 @@ import Header from '../Header/Header';
 import SearchBar from '../SearchBar/SearchBar';
 import Filter from '../Filter/Filter';
 import CountryCardsCtn from '../CountryCardsCtn/CountryCardsCtn';
+import CountryDetails from '../CountryDetails/CountryDetails';
 import { useEffect, useState } from 'react';
+import { Routes, Route } from "react-router-dom";
 import data from '../../data/data';
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
   const [filter, setFilter] = useState('');
   const [search, setSearch] = useState('');
   const [queryData, setQueryData] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState('');
 
   useEffect(() => {
     if (counrtiesDetails) {
@@ -34,11 +37,20 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SearchBar setSearch={setSearch} />
-      <Filter filter={filter} setFilter={setFilter} />
-      <CountryCardsCtn counrtiesDetails={queryData} />
+      <Routes>
+        <Route
+          path="/" element={
+            <>
+              <SearchBar setSearch={setSearch} />
+              <Filter filter={filter} setFilter={setFilter} />
+              <CountryCardsCtn counrtiesDetails={queryData} />
+            </>
+          }
+        />
+        <Route path=":countryName" element={<CountryDetails queryData={queryData}/>} />
+      </Routes>
 
-    </div>
+    </div >
   );
 }
 
