@@ -3,5 +3,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 2rem;
+    margin-top: 2rem;
+    padding: 0 1.71875rem;
 }
