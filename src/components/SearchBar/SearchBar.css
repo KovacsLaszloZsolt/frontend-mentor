@@ -4,7 +4,8 @@
     align-items: center;
     height: 3rem;
     background-color: hsl(0, 0%, 100%);
-    margin: 1.5rem 5vw;
+    margin: 2rem 5vw;
+    border-radius: 10px;
 }
 
 .search-icon {
