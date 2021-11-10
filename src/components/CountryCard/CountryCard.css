@@ -1,19 +1,20 @@
 .country-card {
-    width: 16.5rem;
     background-color: hsl(0, 0%, 100%);
-    margin: 0 2rem 2.5rem 2rem;
     display: flex;
     flex-direction: column;
-    
+    margin: 0 1.71875rem 2.5rem 1.71875rem;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 
 .country-flag {
     width: 16.5rem;
-    height: auto;
+    height: 8.25rem;
+    border-radius: 10px 10px 0 0;
 }
 
 .country-details-ctn {
-    padding: 1.8rem 1.5rem;
+    padding: 1.875rem 1.5rem;
 }
 
 .country-name {
