@@ -1,5 +1,7 @@
 .filter-ctn {
     position: relative;
+    margin: 2rem 5vw 0 5vw;
+    
 }
 
 .filter-base {
@@ -7,16 +9,15 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: hsl(0, 0%, 100%);
-    min-width: 12.5rem;
-    width: 53vw;
-    margin: 0 5vw;
+    background-color: var(--element-bg-color);
+    width: 12.5rem;
     padding: 0 1.5rem;
     cursor: pointer;
     border: none;
     height: 3rem;
     border-radius: 10px;
     font-size: 1rem;
+    box-shadow: rgb(0 0 0 / 8%) 0px 1px 9px;
 }
 
 .arrow-icon {
@@ -25,13 +26,13 @@
 
 .filter {
     position: absolute;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--element-bg-color);
     z-index: 9999999;
-    min-width: 12.5rem;
-    width: 53vw;
-    margin: .5rem 5vw 0 5vw;
+    width: 12.5rem;
+    margin-top: .5rem;
     padding: 1rem 1.5rem 0 1.5rem;
     border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 5px 15px;
 }
 
 .filter-elem {

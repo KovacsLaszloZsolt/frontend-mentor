@@ -28,16 +28,23 @@ const Filter = ({ filter, setFilter }) => {
     }
 
     const handleFilterOnClick = (e) => {
+        const prevSelectedFilter = document.querySelector('.filter-selected');
+        if (prevSelectedFilter) {
+            prevSelectedFilter.classList.remove('filter-selected');
+        }
 
         const arrow = document.querySelector('.arrow-icon');
         const filter = document.querySelector('.filter');
         const filterTitle = document.querySelector('.filter-base-title');
-
+        const selectedFilter = e.target;
+        selectedFilter.classList.add('filter-selected');
         arrow.innerText = 'expand_less';
         filter.classList.add('filter-inactive');
-        filterTitle.innerText = e.target.innerText;
 
-        setFilter(e.target.innerText === 'All' ? '' : e.target.innerText);
+        filterTitle.innerText = selectedFilter.innerText;
+
+
+        setFilter(selectedFilter.innerText === 'All' ? '' : selectedFilter.innerText);
         setIsFilterOpen(false);
     }
 

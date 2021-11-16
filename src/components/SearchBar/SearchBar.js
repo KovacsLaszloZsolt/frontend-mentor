@@ -1,18 +1,19 @@
 import './SearchBar.css';
 
-const SearchBar = ({ setSearch }) => {
+const SearchBar = ({ search, setSearch }) => {
     const handleSearchOnChange = (e) => {
         setSearch(e.target.value);
     }
     return (
         <div className="search-bar-ctn">
-            <span className="search-icon material-icons-outlined">
+            <label htmlFor="country-search" className="search-icon material-icons-outlined">
                 search
-            </span>
+            </label>
             <input
                 type="text"
                 name="country-search"
                 id="country-search"
+                value={search}
                 placeholder="Search for a country..."
                 onChange={handleSearchOnChange}
             />

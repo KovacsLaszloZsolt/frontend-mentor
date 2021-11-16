@@ -1,11 +1,15 @@
 .details-card-ctn {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 0 1.75rem 0 1.75rem;
-
+    width: 375px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
 }
 
 .back-btn {
+    align-self: flex-start;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -13,9 +17,13 @@
     width: 6.5rem;
     height: 2rem;
     margin: 2.5rem 0 3rem 0;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--element-bg-color);
     font-size: 1rem;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 35%) 0px 3px 1px;
+
 }
 
 .arrow-back {
@@ -26,4 +34,141 @@
     width: 20rem;
     height: 14.375rem;
     margin-bottom: 3rem;
+}
+
+.country-details-name {
+    margin-bottom: 1.5rem;
+}
+
+.listed-details ul li {
+    list-style: none;
+    line-height: 1.6rem;
+}
+
+.listed-details ul li strong {
+    margin-right: .5rem;
+}
+
+.listed-details > ul {
+    margin-bottom: 2.5rem;
+}
+
+.border-countries-ctn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+.border-country {
+    width: 6rem;
+    height: auto;
+    padding: .5rem 0;
+    background-color: var(--element-bg-color);
+    text-align: center;
+    margin: .625rem .625rem 0 0;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 3px 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .card-ctn {
+        padding: 0;
+    }
+    .details-card-ctn {
+        padding: 0;
+        width: 35rem;
+    }
+
+    .country-details-flag {
+        width: 35rem;
+        height: 25rem;
+    }
+
+    .listed-details {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .listed-details > ul {
+        margin-bottom: 1.5rem;
+    }
+
+    .listed-details > ul:first-of-type {
+        margin-right: 6rem;
+    }
+
+    .listed-details > ul > li {
+        margin-bottom: 1rem;
+    }
+
+    .border-countries-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .border-countries-ctn {
+        margin-left: 1rem;
+        margin-bottom: 0;
+        max-width: 400px;
+    }
+
+    .border-country {
+        margin: 0 .625rem .625rem 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .details-card-ctn {
+    align-items: flex-start;
+    padding: 0 5rem;
+    width: 100%;
+    }
+
+    .back-btn {
+        margin: 5rem 0 8rem 0;
+    }
+
+    .details-ctn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .country-details-flag {
+        width: 30rem;
+        height: 20rem;
+    }
+
+    .details {
+        margin-left: 3.5rem;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .country-details-flag {
+        width: 35rem;
+        height: 25rem;
+    }
+
+    .details-ctn {
+        align-items: flex-start;
+    }
+
+    .details {
+        margin-top: 2.5rem;
+        margin-left: 5.5rem;
+        width: 100%;
+    }
+
+    .country-details-name {
+    margin-bottom: 2.5rem;
+    }   
 }
