@@ -5,7 +5,8 @@ class IpLocasion {
             minZoom: 2,
             zoomControl: false
         });
-        this.ipValid = false;
+        this.addressValid = false;
+        this.address = [];
         this.positionMarker = L.marker([0, 0], {
             icon: L.icon({
                 iconUrl: './images/icon-location.svg',
@@ -20,20 +21,20 @@ class IpLocasion {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const ipAddress = e.target[0].value;
+            const address = e.target[0].value;
 
             e.target[0].value = '';
 
-            this.ipValid = this.validateIPaddress(ipAddress);
+            this.addressValid = this.validateAddress(address);
 
             if (document.querySelector('.error-msg')) {
                 form.removeChild(document.querySelector('.error-msg'));
             }
 
-            if (this.ipValid) {
-                this.setLocasion(ipAddress);
+            if (this.addressValid) {
+                this.setLocasion(this.address);
             } else {
-                this.setErrorMsg('Ip address is invalid');
+                this.setErrorMsg('Ip address or domain is invalid');
             }
 
         });
@@ -56,10 +57,17 @@ class IpLocasion {
 
     };
 
-    validateIPaddress(ipAddress) {
-        if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(ipAddress)) {
-            return (true);
+    validateAddress(address) {
+
+        if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(address)) {
+            this.address = ['ipAddress', address]
+            return true;
         };
+
+        if (/^(?!.*?_.*?)(?!(?:[\d\w]+?\.)?\-[\w\d\.\-]*?)(?![\w\d]+?\-\.(?:[\d\w\.\-]+?))(?=[\w\d])(?=[\w\d\.\-]*?\.+[\w\d\.\-]*?)(?![\w\d\.\-]{254})(?!(?:\.?[\w\d\-\.]*?[\w\d\-]{64,}\.)+?)[\w\d\.\-]+?(?<![\w\d\-\.]*?\.[\d]+?)(?<=[\w\d\-]{2,})(?<![\w\d\-]{25})$/.test(address)) {
+            this.address = ['domain', address];
+            return true;
+        }
 
         return (false);
     };
@@ -79,15 +87,15 @@ class IpLocasion {
     setSearchedMap(cordinates, zoom) {
         this.worldMap.setView(cordinates, zoom);
 
-        if (this.ipValid) {
+        if (this.addressValid) {
             this.positionMarker.setLatLng(cordinates).addTo(this.worldMap);
         } else {
             this.positionMarker.removeFrom(this.worldMap);
         };
     };
 
-    setLocasion(ipAddress) {
-        const URL = `https://geo.ipify.org/api/v2/country,city?apiKey=at_cCdrDBC5JLJKUT7KBvW6b5K17JCZX&ipAddress=${ipAddress}`;
+    setLocasion(address) {
+        const URL = `https://geo.ipify.org/api/v2/country,city?apiKey=at_cCdrDBC5JLJKUT7KBvW6b5K17JCZX&${address[0]}=${address[1]}`;
 
         fetch(URL)
             .then(response => {
@@ -104,7 +112,7 @@ class IpLocasion {
                     </div>
                     <div class="detail-ctn">
                         <h2>Location</h2>
-                        <p class="detail-data">${ipDetails.location.city}, ${ipDetails.location.region}<span class=" class="detail-ctn"">${ipDetails.location.postalCode}</span></p>
+                        <p class="detail-data">${ipDetails.location.city}, ${ipDetails.location.region}<span class="postal-code">${ipDetails.location.postalCode}</span></p>
                     </div>
                     <div class="detail-ctn">
                         <h2>Timezone</h2>
