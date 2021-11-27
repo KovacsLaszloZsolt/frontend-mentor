@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <div class="wrapper home">
+      <header>
+        <img src="./assets/shared/logo.svg" alt="logo" class="logo" />
+        <img
+          src="./assets/shared/icon-hamburger.svg"
+          alt="menu-icon"
+          class="menu-icon"
+        />
+        <ul class="nav-menu">
+          <li class="nav-item" data-target="home"><span>00</span> Home</li>
+          <li class="nav-item" data-target="destination">
+            <span>01</span> Destination
+          </li>
+          <li class="nav-item" data-target="crew"><span>02</span> Crew</li>
+          <li class="nav-item" data-target="technology">
+            <span>03</span> Technology
+          </li>
+        </ul>
+      </header>
+      <main>
+        <div id="home-modal">
+          <p class="text-before-title">So, you want to travel to</p>
+          <h1>Space</h1>
+          <p class="description">
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+          <div class="circle">
+            <span>Explore</span>
+          </div>
+        </div>
+        <div id="destination-modal"></div>
+        <div id="crew"></div>
+        <div id="technology"></div>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

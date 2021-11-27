@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-active {
+  display: block !important;
+}
+
+/* ---MOBILE--- */
+.wrapper {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+header .menu-icon {
+  z-index: 9999999;
+}
+header .nav-menu {
+  display: none;
+  width: 68vw;
+  position: absolute;
+  padding: 7.375rem 0 0 2rem;
+  right: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+  min-height: 100%;
+  z-index: 999999;
+}
+header .nav-menu .nav-item {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  line-height: 1.2rem;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+  list-style: none;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+header .nav-menu .nav-item span {
+  font-weight: 700;
+}
+
+.home {
+  background-image: url(/assets/home/background-home-mobile.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+#home-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+#home-modal .text-before-title {
+  color: #d0d6f9;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+#home-modal h1 {
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 6.25rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+#home-modal .description {
+  color: #d0d6f9;
+  text-align: center;
+  font-size: 0.9375ren;
+  line-height: 1.5625rem;
+}
+#home-modal .circle {
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.0625rem;
+  margin-bottom: 3rem;
+}
+#home-modal .circle span {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.4325rem;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */
