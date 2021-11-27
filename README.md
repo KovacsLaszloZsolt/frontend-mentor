@@ -1,1 +1,1 @@
-[https://ipa-tracker.netlify.app/]
+https://ipa-tracker.netlify.app/
