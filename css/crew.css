@@ -1,0 +1,172 @@
+.c-active {
+  opacity: 1 !important;
+}
+
+.crew {
+  background-image: url(../assets/crew/background-crew-mobile.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .crew-page {
+    min-height: calc(100vh - 120px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-page {
+    max-width: 1640px;
+    margin: 0 auto;
+    min-height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 70px minmax(650px, calc(100vh - 270px));
+    grid-template-areas: "subtitle c-img-ctn s" "crew-ctn c-img-ctn s";
+  }
+}
+.crew-page .c-img-ctn {
+  grid-area: c-img-ctn;
+  border-bottom: 1px solid #383B4B;
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 3rem);
+  margin: 1rem 1.5rem 0 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .crew-page .c-img-ctn {
+    order: 2;
+    margin-top: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-page .c-img-ctn {
+    align-items: flex-end;
+  }
+}
+.crew-page .c-img-ctn .c-img {
+  height: 59.2vw;
+  mix-blend-mode: normal;
+}
+@media screen and (min-width: 1200px) {
+  .crew-page .c-img-ctn .c-img {
+    min-height: 600px;
+    height: 80%;
+  }
+}
+.crew-page .crew-ctn {
+  grid-area: crew-ctn;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .crew-page .crew-ctn {
+    order: 1;
+    margin: 0 20.18vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-page .crew-ctn {
+    margin: 0 0 0 10.375rem;
+    align-items: flex-start;
+  }
+}
+.crew-page .sub-nav {
+  margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .crew-page .sub-nav {
+    order: 4;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+  }
+}
+.crew-page .sub-nav .c-list-item {
+  margin-right: 1rem;
+  list-style: none;
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #ffffff;
+  opacity: 0.17;
+  border-radius: 50%;
+}
+.crew-page .sub-nav .c-list-item:hover {
+  opacity: 0.5;
+}
+.crew-page .sub-nav .c-list-item:last-of-type {
+  margin-right: 0;
+}
+.crew-page .c-role {
+  font-family: "Bellefair", serif;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .crew-page .c-role {
+    order: 1;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin-top: 2.75rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-page .c-role {
+    font-size: 2rem;
+    line-height: 2.3125rem;
+    margin-top: 0;
+  }
+}
+.crew-page .c-name {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .crew-page .c-name {
+    order: 2;
+    font-size: 2.5rem;
+    line-height: 2.875rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-page .c-name {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-top: 0.9375rem;
+  }
+}
+.crew-page .c-bio {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  color: #d0d6f9;
+  text-align: center;
+  margin: 1rem 1.5rem 6.5rem 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .crew-page .c-bio {
+    order: 3;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .crew-page .c-bio {
+    width: 30.8vw;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    text-align: left;
+    margin: 1.6875rem 0 7.5rem 0;
+  }
+}
+
+/*# sourceMappingURL=crew.css.map */

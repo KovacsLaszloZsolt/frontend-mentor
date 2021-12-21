@@ -8,6 +8,10 @@
   display: block !important;
 }
 
+.modal-inactive {
+  display: none !important;
+}
+
 /* ---MOBILE--- */
 .wrapper {
   padding: 1.5rem 1.5rem 0 1.5rem;

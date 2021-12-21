@@ -1,0 +1,172 @@
+.home {
+  background-image: url(../assets/home/background-home-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .home {
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home {
+    background-image: url(../assets/home/background-home-desktop.jpg);
+  }
+}
+
+.home-page {
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .home-page {
+    margin-top: 4.125rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home-page {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 0;
+    margin: 15.6875rem auto 8.1875rem auto;
+    max-width: 1640px;
+  }
+}
+
+.home-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .home-content-wrapper {
+    margin: 0 9.9375rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home-content-wrapper {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home-content-wrapper {
+    width: 28.125rem;
+    margin-left: 10.375rem;
+  }
+}
+.home-content-wrapper .subtitle {
+  color: #d0d6f9;
+}
+@media screen and (min-width: 768px) {
+  .home-content-wrapper .subtitle {
+    align-self: center;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home-content-wrapper .subtitle {
+    align-self: flex-start;
+    margin-top: 0;
+  }
+}
+
+h1 {
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 6.25rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 9.375rem;
+    line-height: 9.375rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h1 {
+    line-height: 10.75rem;
+  }
+}
+
+.description {
+  color: #d0d6f9;
+  text-align: center;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+}
+@media screen and (min-width: 768px) {
+  .description {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .description {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    text-align: left;
+  }
+}
+
+a {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.4325rem;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #0b0d17;
+}
+@media screen and (min-width: 768px) {
+  a {
+    font-size: 2rem;
+    line-height: 2.3125rem;
+    letter-spacing: 2px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  a {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.circle {
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.0625rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .circle {
+    margin-top: 9.75rem;
+    width: 15.125rem;
+    height: 15.125rem;
+    margin-bottom: 5.625rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .circle {
+    margin: 0 10.375rem 0 0;
+  }
+}
+.circle:hover {
+  outline: 3.875rem solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */

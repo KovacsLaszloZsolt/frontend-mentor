@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-active {
+  display: block !important;
+}
+
+.active-page {
+  cursor: pointer;
+  border-right: 4px solid #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .active-page {
+    border-right: none;
+    border-bottom: 4px solid #ffffff;
+  }
+}
+
+/* ---MOBILE--- */
+header {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 0 0 1.5rem 0;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    padding: 0;
+    margin-bottom: 4rem;
+  }
+}
+header .logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  header .logo {
+    margin: 1.5rem 0 0 2.4375rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .logo {
+    width: 3rem;
+    height: 3rem;
+    margin: 4rem 0 0 3.4375rem;
+  }
+}
+header .horizontal-line {
+  position: absolute;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  header .horizontal-line {
+    display: block;
+    width: 32.85vw;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.25;
+    top: 5.5rem;
+    left: 10.4375rem;
+    z-index: 99999999;
+  }
+}
+header .menu-icon {
+  z-index: 9999999;
+}
+header .menu-icon:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  header .menu-icon {
+    display: none;
+  }
+}
+header .nav-menu {
+  display: none;
+  width: 68vw;
+  position: absolute;
+  padding: 7.375rem 0 0 2rem;
+  right: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+  min-height: 100%;
+  z-index: 999999;
+}
+@media screen and (min-width: 768px) {
+  header .nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    width: 58.6vw;
+    height: 6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .nav-menu {
+    margin-top: 2.5rem;
+  }
+}
+header .nav-menu .nav-item {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  header .nav-menu .nav-item {
+    margin-bottom: 0;
+    height: 100%;
+  }
+}
+header .nav-menu .nav-item:hover {
+  cursor: pointer;
+  border-right: 4px solid #ffffff80;
+}
+@media screen and (min-width: 768px) {
+  header .nav-menu .nav-item:hover {
+    border-right: none;
+    border-bottom: 4px solid #ffffff80;
+  }
+}
+header .nav-menu .nav-item a {
+  font-size: 1rem;
+  letter-spacing: 2.7px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  line-height: 1.2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  header .nav-menu .nav-item a {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+header .nav-menu .nav-item a span {
+  font-weight: 700;
+  margin-right: 0.6875rem;
+}
+@media screen and (min-width: 768px) {
+  header .nav-menu .nav-item a span {
+    display: none;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1800px;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  color: #ffffff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .subtitle {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: 3.38px;
+    padding-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 2.40625rem;
+    align-self: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subtitle {
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+    letter-spacing: 4.725px;
+    margin-top: 0.75rem;
+    margin-left: 10.375rem;
+    grid-area: subtitle;
+  }
+}
+.subtitle span {
+  margin-right: 1rem;
+  font-weight: 700;
+  opacity: 0.25;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub-nav {
+  display: flex;
+  flex-direction: row;
+}
+.sub-nav li:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=common-style.css.map */

@@ -1,0 +1,197 @@
+.t-active {
+  background-color: #ffffff !important;
+  color: #0b0d17 !important;
+}
+
+.technology {
+  background-image: url(../assets/technology/background-technology-mobile.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .technology {
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .technology {
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+  }
+}
+
+.technology-page {
+  padding: 0;
+}
+@media screen and (min-width: 1200px) {
+  .technology-page {
+    display: grid;
+    grid-template-rows: 94px 112px auto auto;
+    max-width: 1640px;
+    margin: 0 auto;
+    grid-template-areas: "subtitle subtitle subtitle" "s s t-img" "sub-nav t-details-ctn t-img" "d d t-img";
+  }
+}
+
+.t-img {
+  width: 100vw;
+  height: 45.3vw;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .t-img {
+    height: auto;
+    margin-top: 2.25rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .t-img {
+    grid-area: t-img;
+    width: 35.76vw;
+    max-width: 32.1875rem;
+    margin-left: auto;
+    margin-bottom: 6.375rem;
+    margin-top: 0;
+  }
+}
+
+.sub-nav {
+  margin-top: 2.125rem;
+}
+@media screen and (min-width: 768px) {
+  .sub-nav {
+    margin-top: 3.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sub-nav {
+    grid-area: sub-nav;
+    flex-direction: column;
+    margin-left: 10.375rem;
+    margin-top: 0;
+  }
+}
+.sub-nav .t-list-item {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  color: #ffffff;
+  list-style: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.sub-nav .t-list-item:hover {
+  border-color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .sub-nav .t-list-item {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sub-nav .t-list-item {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    line-height: 2.3125rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+.sub-nav .t-list-item:last-of-type {
+  margin-right: 0;
+}
+@media screen and (min-width: 1200px) {
+  .sub-nav .t-list-item:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.t-details-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .t-details-ctn {
+    grid-area: t-details-ctn;
+    align-items: flex-start;
+    max-width: 29.735rem;
+  }
+}
+.t-details-ctn .t-sub {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  letter-spacing: 2.3625px;
+  color: #d0d6f9;
+  margin-top: 1.625rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .t-details-ctn .t-sub {
+    font-size: 1rem;
+    line-height: 1.875rem;
+    letter-spacing: 2.7px;
+    margin-top: 2.75rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .t-details-ctn .t-sub {
+    margin-top: 0;
+  }
+}
+.t-details-ctn .t-name {
+  font-family: "Bellefair", serif;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 0.5625rem;
+}
+@media screen and (min-width: 768px) {
+  .t-details-ctn .t-name {
+    font-size: 2.5rem;
+    line-height: 2.875rem;
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .t-details-ctn .t-name {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-top: 0.6875rem;
+  }
+}
+.t-details-ctn .t-description {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  color: #d0d6f9;
+  text-align: center;
+  margin: 1rem 1.5rem 3.5rem 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .t-details-ctn .t-description {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin: 1rem 9.6875rem 6rem 9.6875rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .t-details-ctn .t-description {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    text-align: left;
+    margin: 1.0625rem 0 0 0;
+  }
+}
+
+/*# sourceMappingURL=technology.css.map */
