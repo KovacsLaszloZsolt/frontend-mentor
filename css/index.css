@@ -1,8 +1,8 @@
 .home {
   background-image: url(../assets/home/background-home-mobile.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
   min-height: 100vh;
+  padding-bottom: 6rem;
 }
 @media screen and (min-width: 768px) {
   .home {
