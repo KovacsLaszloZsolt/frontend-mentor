@@ -36,3 +36,4 @@ Users should be able to:
 - Mobile-first workflow
 - Sass
 - Vanilla js
+- cookie
