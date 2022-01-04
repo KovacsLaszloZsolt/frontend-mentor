@@ -61,10 +61,15 @@ body {
 }
 
 .calculator {
-  margin: 6.5rem 0 6rem 0;
+  margin: 1.75rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 530px) {
+  .calculator {
+    margin: 6.5rem 0 6rem 0;
+  }
 }
 
 .header {
