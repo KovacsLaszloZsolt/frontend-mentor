@@ -37,11 +37,23 @@ class Calculator {
 
   init() {
     this.createButtons(this.buttonsLabel);
+    this.setTheme(this.theme);
 
     const themeSelector = document.querySelector(".slider");
+    themeSelector.value = this.theme;
     themeSelector.addEventListener("change", (e) => {
       this.theme = e.target.value;
       this.setTheme(this.theme);
+      // "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+      const expireDate = new Date(
+        new Date().setFullYear(new Date().getFullYear() + 1)
+      );
+
+      document.cookie = "ma=today;path=/`";
+      document.cookie = `selectedTheme = ${
+        this.theme
+      }; expires=${expireDate.toUTCString()}; path=/`;
     });
   }
 
@@ -335,7 +347,6 @@ class Calculator {
   }
 
   setDisplay(currentValue, prevValue) {
-    console.log(currentValue, prevValue);
     const displayCurrentResult = document.querySelector(".result");
     const displayPrevValue = document.querySelector(".prev-result");
 
@@ -347,6 +358,14 @@ class Calculator {
     displayPrevValue.innerText = changeDot(prevValue.toString());
   }
 }
+const cookies = document.cookie
+  .split(";")
+  .map((cookie) => cookie.split("="))
+  .reduce((a, [key, value]) => ({ ...a, [key.trim()]: value }), {});
 
-const calc = new Calculator(buttonsLabel, 1);
+const calc = new Calculator(
+  buttonsLabel,
+  cookies.selectedTheme ? parseInt(cookies.selectedTheme) : 1
+);
+
 calc.init();
