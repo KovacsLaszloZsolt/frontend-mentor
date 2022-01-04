@@ -1,0 +1,183 @@
+:root {
+  --mainBgColor: #3a4764;
+  --keypadBgColor: #232c43;
+  --displayBgColor: #182034;
+  --delBtnBgColor: #637097;
+  --delBtnShadowColor: #404e72;
+  --equalBtnBgColor: #d03f2f;
+  --equalBtnShadowColor: #93261a;
+  --equalTextColor: #fff;
+  --numBtnBgColor: #eae3dc;
+  --numBtnShadowColor: #b4a597;
+  --primaryLabelColor: #444b5a;
+  --secondaryLabelColor: #fff;
+  --titleColor: #fff;
+}
+
+body[data-theme="2"] {
+  --mainBgColor: #e6e6e6;
+  --keypadBgColor: #d1cccc;
+  --displayBgColor: #ededed;
+  --delBtnBgColor: #377f86;
+  --delBtnShadowColor: #1b5f65;
+  --equalBtnBgColor: #ca5502;
+  --equalBtnShadowColor: #893901;
+  --equalTextColor: #fff;
+  --numBtnBgColor: #e5e4e1;
+  --numBtnShadowColor: #a69d91;
+  --primaryLabelColor: #35352c;
+  --secondaryLabelColor: #ffffff;
+  --titleColor: #35352c;
+}
+
+body[data-theme="3"] {
+  --mainBgColor: #160628;
+  --keypadBgColor: #1d0934;
+  --displayBgColor: #1d0934;
+  --delBtnBgColor: #58077d;
+  --delBtnShadowColor: #bc15f4;
+  --equalBtnBgColor: #00e0d1;
+  --equalBtnShadowColor: #6cf9f2;
+  --equalTextColor: #1b2428;
+  --numBtnBgColor: #341c4f;
+  --numBtnShadowColor: #871c9c;
+  --primaryLabelColor: #ffe53d;
+  --secondaryLabelColor: #ffffff;
+  --titleColor: #ffe53d;
+}
+
+:root {
+  font-family: "Spartan", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--mainBgColor);
+}
+
+.calculator {
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--titleColor);
+  margin-bottom: 2rem;
+  width: 20.5rem;
+}
+@media (min-width: 530px) {
+  .header {
+    width: 30.5rem;
+  }
+}
+.header .theme {
+  display: flex;
+  flex-direction: row;
+}
+.header .theme .title {
+  font-size: 0.75rem;
+  align-self: flex-end;
+  margin-right: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.display {
+  background-color: var(--displayBgColor);
+  height: 6.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  color: var(--titleColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 2rem;
+  width: 20.5rem;
+}
+@media (min-width: 530px) {
+  .display {
+    width: 30.5rem;
+    height: 8.5rem;
+  }
+}
+@media (min-width: 530px) {
+  .display .prev-result {
+    font-size: 1.5rem;
+  }
+}
+.display .result {
+  font-size: 2rem;
+}
+@media (min-width: 530px) {
+  .display .result {
+    font-size: 3rem;
+  }
+}
+
+.buttons-ctn {
+  width: 20.5rem;
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 4.75rem) 1fr;
+  grid-template-rows: repeat(5, 4.75rem);
+  grid-template-areas: ". btn-6 btn-7 btn-8 btn-10 ." ". btn-3 btn-4 btn-5 btn-11 ." ". btn-0 btn-1 btn-2 btn-12 ." ". btn-13 btn-9 btn-14 btn-15 ." ". btn-16 btn-16 btn-17 btn-17 .";
+  background-color: var(--keypadBgColor);
+  padding: 1rem 0;
+  border-radius: 10px;
+}
+@media (min-width: 530px) {
+  .buttons-ctn {
+    width: 30.5rem;
+    grid-template-columns: 1fr repeat(4, 7.3125rem) 1fr;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+}
+.btn:hover {
+  cursor: pointer;
+  box-shadow: none !important;
+  opacity: 0.5;
+}
+.btn:not(.btn[data-value=RESET], .btn[data-value="="], .btn[data-value=DEL]) {
+  width: 3.75rem;
+  background-color: var(--numBtnBgColor);
+  box-shadow: 0px 4px var(--numBtnShadowColor);
+  color: var(--primaryLabelColor);
+}
+@media (min-width: 530px) {
+  .btn:not(.btn[data-value=RESET], .btn[data-value="="], .btn[data-value=DEL]) {
+    width: 6.3125rem;
+  }
+}
+.btn[data-value=DEL], .btn[data-value=RESET] {
+  background-color: var(--delBtnBgColor);
+  box-shadow: 0px 4px var(--delBtnShadowColor);
+  color: var(--secondaryLabelColor);
+}
+.btn[data-value="="] {
+  background-color: var(--equalBtnBgColor);
+  box-shadow: 0px 4px var(--equalBtnShadowColor);
+  color: var(--equalTextColor);
+}
+
+.attribution a {
+  color: var(--titleColor);
+}
+
+/*# sourceMappingURL=style.css.map */

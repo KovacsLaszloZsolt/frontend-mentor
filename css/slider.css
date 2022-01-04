@@ -1,0 +1,99 @@
+:root {
+  --mainBgColor: #3a4764;
+  --keypadBgColor: #232c43;
+  --displayBgColor: #182034;
+  --delBtnBgColor: #637097;
+  --delBtnShadowColor: #404e72;
+  --equalBtnBgColor: #d03f2f;
+  --equalBtnShadowColor: #93261a;
+  --equalTextColor: #fff;
+  --numBtnBgColor: #eae3dc;
+  --numBtnShadowColor: #b4a597;
+  --primaryLabelColor: #444b5a;
+  --secondaryLabelColor: #fff;
+  --titleColor: #fff;
+}
+
+body[data-theme="2"] {
+  --mainBgColor: #e6e6e6;
+  --keypadBgColor: #d1cccc;
+  --displayBgColor: #ededed;
+  --delBtnBgColor: #377f86;
+  --delBtnShadowColor: #1b5f65;
+  --equalBtnBgColor: #ca5502;
+  --equalBtnShadowColor: #893901;
+  --equalTextColor: #fff;
+  --numBtnBgColor: #e5e4e1;
+  --numBtnShadowColor: #a69d91;
+  --primaryLabelColor: #35352c;
+  --secondaryLabelColor: #ffffff;
+  --titleColor: #35352c;
+}
+
+body[data-theme="3"] {
+  --mainBgColor: #160628;
+  --keypadBgColor: #1d0934;
+  --displayBgColor: #1d0934;
+  --delBtnBgColor: #58077d;
+  --delBtnShadowColor: #bc15f4;
+  --equalBtnBgColor: #00e0d1;
+  --equalBtnShadowColor: #6cf9f2;
+  --equalTextColor: #1b2428;
+  --numBtnBgColor: #341c4f;
+  --numBtnShadowColor: #871c9c;
+  --primaryLabelColor: #ffe53d;
+  --secondaryLabelColor: #ffffff;
+  --titleColor: #ffe53d;
+}
+
+.theme-selector-ctn {
+  width: 4.5rem;
+  /* Width of the outside container */
+  display: flex;
+  flex-direction: column;
+}
+.theme-selector-ctn .theme-num {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  font-size: 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 1.5rem;
+  /* Specified height */
+  background-color: var(--displayBgColor);
+  outline: none;
+  border-radius: 25px;
+  padding: 0 0.1875rem;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  /* Override default look */
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  background: var(--equalBtnBgColor);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  background: var(--equalBtnBgColor);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=slider.css.map */
